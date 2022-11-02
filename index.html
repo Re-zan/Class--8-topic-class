@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi! This is Javascript practicing time</h1>
+    <h2 id="dfh">Class</h2>
+
+    <h3 id="ages">Here We go</h3>
+
+    <script>
+      class RainbowColors {
+        constructor(colorsname) {
+          this.colorsname = colorsname;
+        }
+        work() {
+          return `The colours of the rainbow are `;
+        }
+      }
+
+      const color1 = new RainbowColors("Red");
+      const color2 = new RainbowColors("Orange");
+      const color3 = new RainbowColors("Yellow");
+      const color4 = new RainbowColors("Green");
+      const color5 = new RainbowColors("Blue");
+      const color6 = new RainbowColors("Indigo");
+      const color7 = new RainbowColors("Violet");
+
+      console.log(color1.colorsname);
+      console.log(color2.colorsname);
+      console.log(color3.colorsname);
+      console.log(color4.colorsname);
+      console.log(color5.colorsname);
+      console.log(color6.colorsname);
+      console.log(color7.colorsname);
+
+      document.getElementById("dfh").innerHTML =
+        color1.work() +
+        color1.colorsname +
+        " ," +
+        color2.colorsname +
+        " ," +
+        color3.colorsname +
+        " ," +
+        color4.colorsname +
+        " ," +
+        color5.colorsname +
+        " ," +
+        color6.colorsname +
+        " ," +
+        color7.colorsname +
+        ".";
+
+      console.log("------");
+
+      //age
+      class GetCorrectAge {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age() {
+          let date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      const person1 = new GetCorrectAge("Sadia", 2002);
+      const person2 = new GetCorrectAge("Priya", 2001);
+
+      document.getElementById("ages").innerHTML = `${
+        person1.name
+      } is now ${person1.age()} years old <br> ${
+        person2.name
+      } is now ${person2.age()} years old`;
+    </script>
+  </body>
+</html>
